@@ -6,7 +6,7 @@ load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../../.env'))
 
 class Settings:
     # API keys and sensitive data from .env
-    GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "AIzaSyDAH3gZbmTJQJ_rN2EK1qHpBTUB-WdjTE8")
+    GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY")
     # For real deployments, throw error if key is not present
     if not GEMINI_API_KEY:
         raise ValueError("GEMINI_API_KEY not set in environment variables or .env file.")
