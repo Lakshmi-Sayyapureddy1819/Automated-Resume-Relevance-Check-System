@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-
+# streamlit title 
 st.title("Automated Resume Relevance Check")
 
 uploaded_jd = st.file_uploader("Upload Job Description (PDF)", type=["pdf"])
