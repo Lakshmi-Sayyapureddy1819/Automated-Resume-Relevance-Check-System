@@ -12,7 +12,9 @@ if st.button("Evaluate"):
             "job_description": (uploaded_jd.name, uploaded_jd, "application/pdf"),
             "resume": (uploaded_resume.name, uploaded_resume, "application/pdf")
         }
-        response = requests.post("http://localhost:8000/api/evaluate/", files=files)
+        response = requests.post("http://127.0.0.1:8000/api/evaluate/", files=files)
+
+
         if response.ok:
             data = response.json()
             st.write(f"Relevance Score: {data['score']}")
